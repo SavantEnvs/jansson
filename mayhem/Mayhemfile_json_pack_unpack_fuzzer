@@ -1,0 +1,9 @@
+project: savantenvs/jansson
+target: json_pack_unpack_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_pack_unpack_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/json_pack_unpack_fuzzer
+    libfuzzer: true
+    timeout: 5

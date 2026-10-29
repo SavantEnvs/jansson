@@ -1,0 +1,9 @@
+project: savantenvs/jansson
+target: json_equal_copy_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_equal_copy_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/json_equal_copy_fuzzer
+    libfuzzer: true
+    timeout: 5
